@@ -1,0 +1,83 @@
+/* ---- fonts ---- */
+@font-face {
+  font-family: 'light';
+  src: url(assets/fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: 'regular';
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: 'bold';
+  src: url(assets/fonts/Roboto-Bold.ttf);
+  font-weight: 800;
+}
+/* ---- colors ---- */
+:root {
+  --000: #fffde7;
+  --100: #fffac0;
+  --200: #fff385;
+  --300: #ffe43f;
+  --400: #ffd00b;
+  --500: #f4b600;
+  --600: #d38b00;
+  --700: #b86b00;
+  --800: #8a4c09;
+  --900: #753e0e;
+  --950: #0000003f;
+}
+/* ---- reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+* {
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+html {
+  -webkit-font-smoothing: antialiased;
+  font-size: 62.5%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+p {
+  max-width: 75ch;
+  text-wrap: pretty;
+  overflow-wrap: break-word;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+a {
+  text-decoration: none;
+}
+table {
+  border-collapse: collapse;
+}
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+  }
+}
