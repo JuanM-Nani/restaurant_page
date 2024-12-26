@@ -5,7 +5,7 @@ import { pizzas, drinks } from './menu_items.js';
 const menuPage = function () {
   content.replaceChildren();
 
-  header.style.backgroundColor = 'rgba(0, 0, 0, 0.155)';
+  header.style.backgroundColor = 'rgba(0, 0, 0, 0.07)';
   content.style.backgroundColor = 'transparent';
   document.body.style.backgroundImage = `url(${menuBgImg})`;
 
@@ -14,6 +14,9 @@ const menuPage = function () {
 
   const pizzaSection = document.createElement('section');
   pizzaSection.classList.add('pizza_section');
+  const pizzaH1 = document.createElement('h1');
+  pizzaH1.textContent = 'Our pizzas';
+
   pizzas.forEach((pizza) => {
     const pizzaCard = document.createElement('div');
     pizzaCard.classList.add('item_card');
@@ -36,6 +39,8 @@ const menuPage = function () {
 
   const drinkSection = document.createElement('section');
   drinkSection.classList.add('drink_section');
+  const drinkH1 = document.createElement('h1');
+  drinkH1.textContent = 'Refreshing drinks';
 
   drinks.forEach((drink) => {
     const drinkCard = document.createElement('div');
@@ -57,7 +62,7 @@ const menuPage = function () {
     drinkSection.appendChild(drinkCard);
   });
 
-  article.append(pizzaSection, drinkSection);
+  article.append(pizzaH1, pizzaSection, drinkH1, drinkSection);
   content.appendChild(article);
 };
 

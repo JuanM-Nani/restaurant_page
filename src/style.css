@@ -2,14 +2,17 @@
 @font-face {
   font-family: 'light';
   src: url(assets/fonts/Roboto-Light.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: 'regular';
   src: url(assets/fonts/Roboto-Regular.ttf);
+  font-display: swap;
 }
 @font-face {
   font-family: 'bold';
   src: url(assets/fonts/Roboto-Bold.ttf);
+  font-display: swap;
 }
 /* ---- colors ---- */
 :root {
@@ -23,6 +26,7 @@
   --700: #b86b00;
   --800: #8a4c09;
   --900: #753e0e;
+  --gradient: linear-gradient(45deg, rgb(255, 153, 70), rgb(187, 2, 162));
   --semi-dark_red: #c50d00;
   --dark_red: #9e0000;
   --dark: #333;
@@ -86,7 +90,6 @@ table {
 }
 /* ---- project ---- */
 body {
-  background: url(assets/img/home_bg.avif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -100,6 +103,7 @@ body {
   box-shadow: 0 2px 50px rgba(0, 0, 0, 0.4);
 
   & img {
+    min-width: 100px;
     width: 100px;
     aspect-ratio: 1;
     filter: drop-shadow(0 0 4px var(--dark));
@@ -108,7 +112,6 @@ body {
 
   & nav {
     display: flex;
-    width: 100%;
 
     & ul {
       display: flex;
@@ -129,7 +132,7 @@ body {
           position: absolute;
           width: 0;
           height: 3px;
-          background-color: var(--000);
+          background: var(--gradient);
           bottom: 0;
           left: 0;
           transition: width 0.3s;
@@ -154,4 +157,10 @@ img {
   -webkit-user-drag: none;
   user-select: none;
   -webkit-user-select: none;
+}
+.gradient {
+  background: var(--gradient) !important;
+  color: transparent !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
 }
