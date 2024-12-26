@@ -10,7 +10,6 @@
 @font-face {
   font-family: 'bold';
   src: url(assets/fonts/Roboto-Bold.ttf);
-  font-weight: 800;
 }
 /* ---- colors ---- */
 :root {
@@ -24,6 +23,10 @@
   --700: #b86b00;
   --800: #8a4c09;
   --900: #753e0e;
+  --semi-dark_red: #c50d00;
+  --dark_red: #9e0000;
+  --dark: #333;
+  --semi-dark: #414141;
   --950: #0000003f;
 }
 /* ---- reset ---- */
@@ -80,4 +83,75 @@ table {
     scroll-behavior: smooth;
     scroll-padding-top: 2rem;
   }
+}
+/* ---- project ---- */
+body {
+  background: url(assets/img/home_bg.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.site_header {
+  height: 17.5vh;
+  display: grid;
+  font-size: 2rem;
+  place-content: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.4);
+
+  & img {
+    width: 100px;
+    aspect-ratio: 1;
+    filter: drop-shadow(0 0 4px var(--dark));
+    margin: 0 6rem;
+  }
+
+  & nav {
+    display: flex;
+    width: 100%;
+
+    & ul {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      list-style-type: none;
+
+      & button {
+        color: var(--000);
+        font-family: 'bold';
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 3px;
+          background-color: var(--000);
+          bottom: 0;
+          left: 0;
+          transition: width 0.3s;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+#content {
+  height: 82.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
 }

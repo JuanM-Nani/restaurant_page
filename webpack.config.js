@@ -3,12 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
+  entry: './src/index.js',
   output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/template.html',
+      inject: 'body',
     }),
   ],
   module: {
@@ -22,9 +26,14 @@ module.exports = {
         loader: 'html-loader',
       },
       {
-        test: /\.(png|svg|jpg|avif|jpeg|gif)$/i,
+        test: /\.(png|svg|avif)$/i,
         type: 'asset/resource',
       },
     ],
+  },
+  devServer: {
+    static: path.resolve(__dirname, 'dist'),
+    open: true,
+    hot: true,
   },
 };

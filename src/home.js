@@ -1,10 +1,27 @@
 import locationImg from './assets/img/location.png';
 import calendarImg from './assets/img/calendar.png';
+import homeBgImg from './assets/img/home_bg.avif';
+
+const imgs = [
+  {
+    imgSrc: locationImg,
+    alt: 'location icon',
+    paragraphs: ['1432 Crescent Valley Blvd', 'Portland, OR 97225'],
+  },
+  {
+    imgSrc: calendarImg,
+    alt: 'calendar icon',
+    paragraphs: ['Mon-Fri: 7pm-12pm', 'Sat: 8pm-12pm'],
+  },
+];
 
 const homePage = function () {
   content.replaceChildren();
 
+  document.body.style.backgroundImage = `url(${homeBgImg})`;
+  content.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
   const article = document.createElement('article');
+  article.classList.add('home_article');
   const header = document.createElement('header');
   article.appendChild(header);
   const h1 = document.createElement('h1');
@@ -18,19 +35,6 @@ const homePage = function () {
   article.appendChild(button);
   const addressCard = document.createElement('section');
   addressCard.classList.add('address_card');
-
-  const imgs = [
-    {
-      imgSrc: locationImg,
-      alt: 'location icon',
-      paragraphs: ['1432 Crescent Valley Blvd', 'Portland, OR 97225'],
-    },
-    {
-      imgSrc: calendarImg,
-      alt: 'calendar icon',
-      paragraphs: ['Mon-Fri: 7pm-12pm', 'Sat: 8pm-12pm'],
-    },
-  ];
 
   imgs.forEach((item) => {
     const figure = document.createElement('figure');
