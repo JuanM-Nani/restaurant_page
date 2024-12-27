@@ -93,6 +93,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .site_header {
   height: 17.5vh;
@@ -124,6 +125,7 @@ body {
         font-family: 'bold';
         background-color: transparent;
         cursor: pointer;
+        user-select: none;
         border: none;
         position: relative;
 
@@ -150,7 +152,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem;
+  padding: 3rem 0;
   text-align: center;
 }
 img {

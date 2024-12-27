@@ -6,6 +6,8 @@ homePage();
 import './home.css';
 import { menuPage } from './menu.js';
 import './menu.css';
+import { aboutPage } from './about_page/about.js';
+import './about_page/about.css';
 
 const headerBtnsNode = document.querySelectorAll('.site_header button');
 header.addEventListener('click', (event) => {
@@ -18,12 +20,16 @@ header.addEventListener('click', (event) => {
   }
 });
 
-const homeBtn = document.querySelector('.home_page');
-homeBtn.addEventListener('click', () => {
+document.querySelector('.home_page').addEventListener('click', () => {
   homePage();
 });
 
-const menuBtn = document.querySelector('.menu_page');
-menuBtn.addEventListener('click', () => {
+document.querySelector('.menu_page').addEventListener('click', () => {
   menuPage();
 });
+
+document.querySelector('.about_page').addEventListener('click', () => {
+  aboutPage();
+});
+
+export { header };

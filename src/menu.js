@@ -1,10 +1,9 @@
 import menuBgImg from './assets/img/menu_bg.avif';
-const header = document.querySelector('.site_header');
+import { header } from './index.js';
 import { pizzas, drinks } from './menu_items.js';
 
 const menuPage = function () {
   content.replaceChildren();
-
   header.style.backgroundColor = 'rgba(0, 0, 0, 0.07)';
   content.style.backgroundColor = 'transparent';
   document.body.style.backgroundImage = `url(${menuBgImg})`;

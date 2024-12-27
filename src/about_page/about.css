@@ -1,0 +1,50 @@
+.about_article {
+}
+.carousel {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  z-index: -10;
+  height: 100vw;
+
+  & div {
+    animation: slider 90s linear infinite;
+    position: relative;
+
+    & img {
+      object-fit: cover;
+      margin: 1rem 0;
+      position: relative;
+      border-radius: 4px;
+    }
+  }
+}
+.col:nth-child(odd) div {
+  animation: sliderReverse 90s linear infinite;
+}
+@keyframes slider {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes sliderReverse {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
