@@ -1,15 +1,38 @@
 .about_article {
+  -webkit-user-drag: none;
+
+  & .about_card {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    text-align: left;
+    color: var(--100);
+
+    & h1 {
+      font-size: 4rem;
+      font-family: 'bold';
+      color: var(--000);
+    }
+    & h2 {
+      font-size: 2.4rem;
+      font-family: 'regular';
+    }
+    & p {
+      font-size: 1.6rem;
+      font-family: 'light';
+    }
+  }
 }
 .carousel {
   gap: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  -webkit-user-drag: none;
   user-select: none;
   -webkit-user-select: none;
   overflow: hidden;
   position: relative;
-  z-index: -10;
+  z-index: -5;
 }
 .col {
   display: flex;
@@ -18,19 +41,21 @@
   height: 100vw;
 
   & div {
-    animation: slider 90s linear infinite;
+    animation: slider 70s linear infinite;
     position: relative;
+    flex: 1;
 
     & img {
       object-fit: cover;
-      margin: 1rem 0;
       position: relative;
+      margin-bottom: 1rem;
       border-radius: 4px;
+      outline: 1px solid rgba(255, 255, 255, 0.233);
     }
   }
 }
 .col:nth-child(odd) div {
-  animation: sliderReverse 90s linear infinite;
+  animation: sliderReverse 70s linear infinite;
 }
 @keyframes slider {
   from {

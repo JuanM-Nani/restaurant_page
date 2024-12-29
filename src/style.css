@@ -100,7 +100,7 @@ body {
   display: grid;
   font-size: 2rem;
   place-content: center;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(5px);
   box-shadow: 0 2px 50px rgba(0, 0, 0, 0.4);
 
   & img {
@@ -149,6 +149,7 @@ body {
 }
 #content {
   height: 82.5vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;

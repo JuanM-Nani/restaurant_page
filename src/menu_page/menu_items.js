@@ -1,11 +1,11 @@
-import pepperoniImg from './assets/img/pizzas/pepperoni.avif';
-import margheritaImg from './assets/img/pizzas/margherita.avif';
-import hawaiianImg from './assets/img/pizzas/hawaiian.avif';
-import fourCheeseImg from './assets/img/pizzas/four_cheese.avif';
-import vegetarianImg from './assets/img/pizzas/vegetarian.avif';
-import bbqImg from './assets/img/pizzas/bbq.avif';
-import meatLoverImg from './assets/img/pizzas/meat.avif';
-import mexicanImg from './assets/img/pizzas/mexican.avif';
+import pepperoniImg from '../assets/img/pizzas/pepperoni.avif';
+import margheritaImg from '../assets/img/pizzas/margherita.avif';
+import hawaiianImg from '../assets/img/pizzas/hawaiian.avif';
+import fourCheeseImg from '../assets/img/pizzas/four_cheese.avif';
+import vegetarianImg from '../assets/img/pizzas/vegetarian.avif';
+import bbqImg from '../assets/img/pizzas/bbq.avif';
+import meatLoverImg from '../assets/img/pizzas/meat.avif';
+import mexicanImg from '../assets/img/pizzas/mexican.avif';
 
 const pizzas = [
   {
@@ -58,12 +58,12 @@ const pizzas = [
   },
 ];
 
-import cokeImg from './assets/img/drinks/coke.avif';
-import spriteImg from './assets/img/drinks/sprite.avif';
-import fantaImg from './assets/img/drinks/fanta.avif';
-import sparklingWaterImg from './assets/img/drinks/sparkling_water.avif';
-import stillWaterImg from './assets/img/drinks/still_water.avif';
-import beerImg from './assets/img/drinks/beer.avif';
+import cokeImg from '../assets/img/drinks/coke.avif';
+import spriteImg from '../assets/img/drinks/sprite.avif';
+import fantaImg from '../assets/img/drinks/fanta.avif';
+import sparklingWaterImg from '../assets/img/drinks/sparkling_water.avif';
+import stillWaterImg from '../assets/img/drinks/still_water.avif';
+import beerImg from '../assets/img/drinks/beer.avif';
 
 const drinks = [
   {

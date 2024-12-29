@@ -4,7 +4,6 @@
   padding: 4rem 0;
   scrollbar-color: var(--semi-dark_red) transparent;
   scrollbar-width: thin;
-  scrollbar-arrow-color: red;
 
   & h1 {
     font-family: 'bold';
@@ -36,12 +35,11 @@
 .item_card figure {
   display: flex;
   flex-grow: 1;
-  background: rgba(0, 0, 0, 0.226);
-  box-shadow: 0 8px 10px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(2.5px);
-  -webkit-backdrop-filter: blur(2.5px);
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  backdrop-filter: blur(1px) saturate(0%);
+  -webkit-backdrop-filter: blur(1px) saturate(0%);
+  background-color: rgba(15, 15, 15, 0.75);
   border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 2rem 3rem;
 
   & img {
@@ -49,28 +47,30 @@
     aspect-ratio: 1;
     object-fit: contain;
     margin-right: 3rem;
-    filter: drop-shadow(0 0 6px var(--dark));
+    filter: drop-shadow(0 0 3px var(--000));
   }
 
   & figcaption {
     display: grid;
     place-content: center;
     text-align: left;
+    text-spacing-trim: 2px;
 
     & h2 {
       font-family: 'bold';
       font-size: 2.4rem;
       margin-bottom: auto;
-      color: var(--dark);
+      color: var(--000);
     }
     & p {
       max-width: 30ch;
       font-family: 'regular';
-      color: var(--semi-dark);
+      color: var(--200);
       font-size: 1.4rem;
     }
     & :last-child {
       color: var(--dark_red);
+      font-family: 'bold';
     }
   }
 }

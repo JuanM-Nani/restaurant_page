@@ -1,6 +1,6 @@
-import locationImg from './assets/img/location.png';
-import calendarImg from './assets/img/calendar.png';
-import homeBgImg from './assets/img/home_bg.avif';
+import locationImg from '../assets/img/location.png';
+import calendarImg from '../assets/img/calendar.png';
+import homeBgImg from '../assets/img/home_bg.avif';
 
 const imgs = [
   {

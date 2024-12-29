@@ -1,13 +1,11 @@
 import './style.css';
 const content = document.querySelector('#content');
 const header = document.querySelector('.site_header');
-import { homePage } from './home.js';
-homePage();
-import './home.css';
-import { menuPage } from './menu.js';
-import './menu.css';
+
 import { aboutPage } from './about_page/about.js';
 import './about_page/about.css';
+import { contactPage } from './contact_page/contact.js';
+import './contact_page/contact.css';
 
 const headerBtnsNode = document.querySelectorAll('.site_header button');
 header.addEventListener('click', (event) => {
@@ -20,9 +18,15 @@ header.addEventListener('click', (event) => {
   }
 });
 
+import { homePage } from './home_page/home.js';
+import './home_page/home.css';
+homePage();
 document.querySelector('.home_page').addEventListener('click', () => {
   homePage();
 });
+
+import { menuPage } from './menu_page/menu.js';
+import './menu_page/menu.css';
 
 document.querySelector('.menu_page').addEventListener('click', () => {
   menuPage();
@@ -30,6 +34,10 @@ document.querySelector('.menu_page').addEventListener('click', () => {
 
 document.querySelector('.about_page').addEventListener('click', () => {
   aboutPage();
+});
+
+document.querySelector('.contact_page').addEventListener('click', () => {
+  contactPage();
 });
 
 export { header };
