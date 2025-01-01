@@ -32,6 +32,10 @@ document.querySelector('.menu_page').addEventListener('click', () => {
   menuPage();
 });
 
+document.querySelector('.home_btn').addEventListener('click', () => {
+  menuPage();
+});
+
 document.querySelector('.about_page').addEventListener('click', () => {
   aboutPage();
 });

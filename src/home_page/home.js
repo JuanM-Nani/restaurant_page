@@ -31,6 +31,7 @@ const homePage = function () {
   h2.textContent = 'Affordable, Delicious, and Made Just for You!';
   header.append(h1, h2);
   const button = document.createElement('button');
+  button.classList.add('home_btn');
   button.textContent = 'Order now';
   article.appendChild(button);
   const addressCard = document.createElement('section');
