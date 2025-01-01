@@ -2,8 +2,19 @@
   overflow: auto;
   height: 82.5vh;
   padding: 4rem 0;
-  scrollbar-color: var(--semi-dark_red) transparent;
-  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--semi-dark_red);
+    border-radius: 10px;
+    height: 10px;
+    cursor: pointer;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
 
   & h1 {
     font-family: 'bold';
@@ -14,11 +25,11 @@
     -webkit-background-clip: text;
   }
 }
-.pizza_section {
+.pizza_container {
   margin-bottom: 2rem;
 }
-.pizza_section,
-.drink_section {
+.pizza_container,
+.drink_container {
   display: grid;
   place-content: center;
   grid-template-rows: repeat(4, fit-content);
@@ -26,7 +37,7 @@
   padding: 2rem 4rem;
   gap: 3rem;
 }
-.drink_section {
+.drink_container {
   grid-template-rows: repeat(3, fit-content);
 }
 .item_card {

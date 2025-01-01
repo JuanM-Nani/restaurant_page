@@ -1,8 +1,8 @@
-import locationImg from '../assets/img/location.png';
-import calendarImg from '../assets/img/calendar.png';
-import homeBgImg from '../assets/img/home_bg.avif';
+import locationImg from '../assets/icons/location.png';
+import calendarImg from '../assets/icons/clock.png';
+import homeBgImg from './img/home_bg.avif';
 
-const imgs = [
+const info = [
   {
     imgSrc: locationImg,
     alt: 'location icon',
@@ -36,7 +36,7 @@ const homePage = function () {
   const addressCard = document.createElement('section');
   addressCard.classList.add('address_card');
 
-  imgs.forEach((item) => {
+  info.forEach((item) => {
     const figure = document.createElement('figure');
 
     const img = document.createElement('img');

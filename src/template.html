@@ -9,21 +9,25 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
-
+    <link rel="preload" as="image" href="home_page/img/home_bg.avif" />
+    <link rel="preload" as="image" href="menu_page/img/menu_bg.avif" />
+    <link rel="preload" as="image" href="contact_page/img/contact_bg.avif" />
     <title>El Papu pizzeria</title>
   </head>
   <body>
     <header class="site_header">
       <nav>
-        <ul>
-          <li><button class="home_page nav_button">Home</button></li>
-          <li><button class="menu_page nav_button">Menu</button></li>
-        </ul>
-        <img src="assets/img/logo.avif" alt="logo pizzeria el papu" />
-        <ul>
-          <li><button class="about_page nav_button">About</button></li>
-          <li><button class="contact_page nav_button">Contact</button></li>
-        </ul>
+        <div class="nav_group">
+          <ul>
+            <li><button class="home_page nav_button">Home</button></li>
+            <li><button class="menu_page nav_button">Menu</button></li>
+          </ul>
+          <img src="assets/icons/logo.svg" alt="logo pizzeria el papu" />
+          <ul>
+            <li><button class="about_page nav_button">About</button></li>
+            <li><button class="contact_page nav_button">Contact</button></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <main id="content"></main>
@@ -32,5 +36,16 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: 'Lf8k4Cf-hSgmmsV4w',
+        });
+      })();
+    </script>
   </body>
 </html>
