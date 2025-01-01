@@ -11,7 +11,7 @@ Interactive map with Leaflet.
 Form messages sended with EmaiJS.
 Menu items generated with Microsoft Bing Image Generator.
 Logo maked with Inkscape.
-Used Glassmorphism.
+Used Glassmorphism from https://ui.glass/generator/.
 Menu and Contact bg with Canva.
 3D icons from https://icons8.com/icon/set/location-3d/3d-fluency.
 Media icons from: 
