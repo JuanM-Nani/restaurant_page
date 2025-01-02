@@ -18,21 +18,20 @@ header.addEventListener('click', (event) => {
   }
 });
 
-import { homePage } from './home_page/home.js';
+import { homePage, homeBtnEvent } from './home_page/home.js';
 import './home_page/home.css';
 homePage();
+homeBtnEvent();
+
 document.querySelector('.home_page').addEventListener('click', () => {
   homePage();
+  homeBtnEvent();
 });
 
 import { menuPage } from './menu_page/menu.js';
 import './menu_page/menu.css';
 
 document.querySelector('.menu_page').addEventListener('click', () => {
-  menuPage();
-});
-
-document.querySelector('.home_btn').addEventListener('click', () => {
   menuPage();
 });
 

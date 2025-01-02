@@ -1,43 +1,35 @@
-import locationImg from '../assets/icons/location.png';
-import calendarImg from '../assets/icons/clock.png';
 import homeBgImg from './img/home_bg.avif';
-
-const info = [
-  {
-    imgSrc: locationImg,
-    alt: 'location icon',
-    paragraphs: ['1432 Crescent Valley Blvd', 'Portland, OR 97225'],
-  },
-  {
-    imgSrc: calendarImg,
-    alt: 'calendar icon',
-    paragraphs: ['Mon-Fri: 7pm-12pm', 'Sat: 8pm-12pm'],
-  },
-];
+import { addressInfo } from './home_content.js';
 
 const homePage = function () {
   content.replaceChildren();
 
   document.body.style.backgroundImage = `url(${homeBgImg})`;
   content.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+
   const article = document.createElement('article');
   article.classList.add('home_article');
+
   const header = document.createElement('header');
-  article.appendChild(header);
   const h1 = document.createElement('h1');
   h1.textContent =
     'Experience the Best Pizza in Town. Fresh Ingredients, Unique Flavors, and Unbeatable Taste!';
   const h2 = document.createElement('h2');
   h2.textContent = 'Affordable, Delicious, and Made Just for You!';
-  header.append(h1, h2);
   const button = document.createElement('button');
   button.classList.add('home_btn');
   button.textContent = 'Order now';
-  article.appendChild(button);
+
+  header.append(h1, h2, button);
+  article.append(header, createAddressCard());
+  content.append(article);
+};
+
+function createAddressCard() {
   const addressCard = document.createElement('section');
   addressCard.classList.add('address_card');
 
-  info.forEach((item) => {
+  addressInfo.forEach((item) => {
     const figure = document.createElement('figure');
 
     const img = document.createElement('img');
@@ -57,8 +49,19 @@ const homePage = function () {
     addressCard.appendChild(figure);
   });
 
-  article.appendChild(addressCard);
-  content.append(article);
-};
+  return addressCard;
+}
 
-export { homePage };
+import { menuPage } from '../menu_page/menu.js';
+function homeBtnEvent() {
+  const headerBtnsNode = document.querySelectorAll('.site_header button');
+  document.querySelector('.home_btn').addEventListener('click', () => {
+    headerBtnsNode.forEach((btn) => {
+      btn.classList.remove('gradient');
+    });
+    document.querySelector('.menu_page').classList.add('gradient');
+    menuPage();
+  });
+}
+
+export { homePage, homeBtnEvent };
