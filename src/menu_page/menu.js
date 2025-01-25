@@ -35,10 +35,9 @@ function createSection(itemsArr) {
     const itemName = document.createElement('h2');
     itemName.textContent = item.name;
     const itemDescription = document.createElement('p');
-    itemDescription.textContent = item.ingredients;
+    itemDescription.textContent = item.description;
     const itemPrice = document.createElement('p');
     itemPrice.textContent = item.price;
-
     figCaption.append(itemName, itemDescription, itemPrice);
     figure.append(itemImg, figCaption);
     itemCard.appendChild(figure);
