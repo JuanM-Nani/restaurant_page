@@ -1,12 +1,3 @@
-To do in the future:
-
--Responsiveness.
--Captcha.
--Log in with GMAIL API  .
--Order system with order cart.
--Refactor.
--Solve the firts load and refresh styles delay.
-
 Interactive map with https://leafletjs.com/.
 Form messages sended with https://www.emailjs.com/.
 Menu items generated with https://www.bing.com/images/create?cc=es.
